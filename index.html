@@ -27,13 +27,14 @@
             text-align: center;
             position: relative;
             z-index: 2;
+            width: 90%;
         }
 
         .title {
             font-family: 'Dancing Script', cursive;
-            font-size: 3rem;
+            font-size: 2.5rem; /* Adjusted for mobile */
             color: #fff;
-            margin-bottom: 5rem;
+            margin-bottom: 2rem; /* Reduced margin for mobile */
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             animation: glow 2s ease-in-out infinite alternate;
         }
@@ -45,12 +46,14 @@
 
         .cake-container {
             position: relative;
-            margin: 2rem auto;
+            margin: 1.5rem auto;
         }
 
         .cake {
-            width: 300px;
-            height: 200px;
+            width: 70vw; /* Responsive width */
+            height: 40vh; /* Responsive height */
+            max-width: 300px; /* Limit max width */
+            max-height: 200px;
             background: linear-gradient(to bottom, #ff6b6b, #ee5a52);
             border-radius: 20px 20px 0 0;
             position: relative;
@@ -61,49 +64,51 @@
         .cake::before {
             content: '';
             position: absolute;
-            top: -20px;
-            left: 10px;
-            right: 10px;
-            height: 40px;
+            top: -10%; /* Adjusted for responsiveness */
+            left: 5%;
+            right: 5%;
+            height: 20%;
             background: linear-gradient(to bottom, #fff, #f8f8f8);
             border-radius: 20px;
             box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
         }
 
         .cake-base {
-            width: 320px;
-            height: 60px;
+            width: 75vw; /* Responsive width */
+            height: 15vh; /* Responsive height */
+            max-width: 320px;
+            max-height: 60px;
             background: linear-gradient(to bottom, #8b4513, #5d2f0a);
             border-radius: 0 0 30px 30px;
             position: absolute;
-            bottom: -60px;
-            left: -10px;
+            bottom: -15vh; /* Adjusted for responsiveness */
+            left: -2.5vw;
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
         .candles {
             position: absolute;
-            top: -60px;
+            top: -15vh; /* Adjusted for responsiveness */
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 20px;
+            gap: 5vw; /* Responsive gap */
         }
 
         .candle {
             position: relative;
-            font-size: 2rem;
+            font-size: 1.5rem; /* Adjusted for mobile */
             color: #ffeb3b;
             text-shadow: 0 0 10px #fff, 0 0 20px #ff4;
         }
 
         .flame {
-            width: 12px;
-            height: 15px;
+            width: 8px; /* Reduced for mobile */
+            height: 10px;
             background: radial-gradient(circle, #ff6b35 0%, #ff8e35 40%, #ffab35 100%);
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             position: absolute;
-            top: -20px;
+            top: -15px;
             left: 50%;
             transform: translateX(-50%);
             animation: flicker 0.5s ease-in-out infinite alternate;
@@ -115,9 +120,9 @@
         }
 
         .wish-text {
-            font-size: 1.5rem;
+            font-size: 1.2rem; /* Adjusted for mobile */
             color: #fff;
-            margin: 3rem 0 2rem;
+            margin: 1.5rem 0 1rem;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
             animation: pulse 2s ease-in-out infinite;
         }
@@ -131,13 +136,14 @@
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.2rem;
+            padding: 10px 20px; /* Reduced padding for mobile */
+            font-size: 1rem;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             font-weight: 600;
+            min-width: 120px; /* Ensure tappable area */
         }
 
         .blow-btn:hover {
@@ -157,8 +163,8 @@
 
         .firework {
             position: absolute;
-            width: 6px;
-            height: 6px;
+            width: 4px; /* Reduced for mobile */
+            height: 4px;
             background: #fff;
             border-radius: 50%;
             animation: firework 1s ease-out forwards;
@@ -173,18 +179,18 @@
                 opacity: 1;
             }
             100% {
-                transform: scale(20);
+                transform: scale(15); /* Reduced scale for mobile */
                 opacity: 0;
             }
         }
 
         .birthday-message {
             font-family: 'Dancing Script', cursive;
-            font-size: 4rem;
+            font-size: 2.5rem; /* Adjusted for mobile */
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             animation: celebration-text 3s ease-in-out infinite;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         @keyframes celebration-text {
@@ -210,7 +216,7 @@
         .heart {
             position: absolute;
             color: #ff69b4;
-            font-size: 2rem;
+            font-size: 1.5rem; /* Adjusted for mobile */
             animation: float-up 4s linear infinite;
             opacity: 0;
         }
@@ -229,8 +235,8 @@
         .confetti {
             position: fixed;
             top: -10px;
-            width: 10px;
-            height: 10px;
+            width: 8px; /* Reduced for mobile */
+            height: 8px;
             background: #ff6b6b;
             animation: confetti-fall 3s linear infinite;
         }
@@ -249,13 +255,31 @@
         .star {
             position: absolute;
             color: #ffd700;
-            font-size: 1.5rem;
+            font-size: 1.2rem; /* Adjusted for mobile */
             animation: twinkle 2s ease-in-out infinite;
         }
 
         @keyframes twinkle {
             0%, 100% { opacity: 0.3; transform: scale(1); }
             50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Media Query for Mobile */
+        @media (max-width: 600px) {
+            .title { font-size: 2rem; margin-bottom: 1.5rem; }
+            .cake { width: 80vw; height: 35vh; }
+            .cake-base { width: 85vw; height: 12vh; bottom: -12vh; }
+            .candles { top: -12vh; gap: 4vw; }
+            .candle { font-size: 1.2rem; }
+            .flame { width: 6px; height: 8px; }
+            .wish-text { font-size: 1rem; margin: 1rem 0 0.5rem; }
+            .blow-btn { padding: 8px 15px; font-size: 0.9rem; min-width: 100px; }
+            .birthday-message { font-size: 2rem; margin-top: 1rem; }
+            .heart { font-size: 1.2rem; }
+            .star { font-size: 1rem; }
+            .firework { width: 3px; height: 3px; }
+            @keyframes firework { 100% { transform: scale(10); } }
+            .confetti { width: 6px; height: 6px; }
         }
     </style>
 </head>
@@ -439,7 +463,7 @@
                     currentTime += note.duration;
                 });
                 
-                 setTimeout(playMelody, currentTime * 1000 - audioContext.currentTime * 1000);
+                setTimeout(playMelody, currentTime * 1000 - audioContext.currentTime * 1000);
             }
             
             playMelody();
