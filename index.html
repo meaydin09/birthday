@@ -27,14 +27,15 @@
             text-align: center;
             position: relative;
             z-index: 2;
-            width: 90%;
+            width: 100%;
+            max-width: 600px; /* Limit max width for desktop */
         }
 
         .title {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem; /* Adjusted for mobile */
+            font-size: 3rem;
             color: #fff;
-            margin-bottom: 2rem; /* Reduced margin for mobile */
+            margin-bottom: 5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             animation: glow 2s ease-in-out infinite alternate;
         }
@@ -46,14 +47,12 @@
 
         .cake-container {
             position: relative;
-            margin: 1.5rem auto;
+            margin: 2rem auto;
         }
 
         .cake {
-            width: 70vw; /* Responsive width */
-            height: 40vh; /* Responsive height */
-            max-width: 300px; /* Limit max width */
-            max-height: 200px;
+            width: 300px;
+            height: 200px;
             background: linear-gradient(to bottom, #ff6b6b, #ee5a52);
             border-radius: 20px 20px 0 0;
             position: relative;
@@ -64,51 +63,49 @@
         .cake::before {
             content: '';
             position: absolute;
-            top: -10%; /* Adjusted for responsiveness */
-            left: 5%;
-            right: 5%;
-            height: 20%;
+            top: -20px;
+            left: 10px;
+            right: 10px;
+            height: 40px;
             background: linear-gradient(to bottom, #fff, #f8f8f8);
             border-radius: 20px;
             box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
         }
 
         .cake-base {
-            width: 75vw; /* Responsive width */
-            height: 15vh; /* Responsive height */
-            max-width: 320px;
-            max-height: 60px;
+            width: 320px;
+            height: 60px;
             background: linear-gradient(to bottom, #8b4513, #5d2f0a);
             border-radius: 0 0 30px 30px;
             position: absolute;
-            bottom: -15vh; /* Adjusted for responsiveness */
-            left: -2.5vw;
+            bottom: -60px;
+            left: -10px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
         .candles {
             position: absolute;
-            top: -15vh; /* Adjusted for responsiveness */
+            top: -60px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 5vw; /* Responsive gap */
+            gap: 20px;
         }
 
         .candle {
             position: relative;
-            font-size: 1.5rem; /* Adjusted for mobile */
+            font-size: 2rem;
             color: #ffeb3b;
             text-shadow: 0 0 10px #fff, 0 0 20px #ff4;
         }
 
         .flame {
-            width: 8px; /* Reduced for mobile */
-            height: 10px;
+            width: 12px;
+            height: 15px;
             background: radial-gradient(circle, #ff6b35 0%, #ff8e35 40%, #ffab35 100%);
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             position: absolute;
-            top: -15px;
+            top: -20px;
             left: 50%;
             transform: translateX(-50%);
             animation: flicker 0.5s ease-in-out infinite alternate;
@@ -120,9 +117,9 @@
         }
 
         .wish-text {
-            font-size: 1.2rem; /* Adjusted for mobile */
+            font-size: 1.5rem;
             color: #fff;
-            margin: 1.5rem 0 1rem;
+            margin: 3rem 0 2rem;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
             animation: pulse 2s ease-in-out infinite;
         }
@@ -136,14 +133,13 @@
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
             color: white;
             border: none;
-            padding: 10px 20px; /* Reduced padding for mobile */
-            font-size: 1rem;
+            padding: 15px 30px;
+            font-size: 1.2rem;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             font-weight: 600;
-            min-width: 120px; /* Ensure tappable area */
         }
 
         .blow-btn:hover {
@@ -163,8 +159,8 @@
 
         .firework {
             position: absolute;
-            width: 4px; /* Reduced for mobile */
-            height: 4px;
+            width: 6px;
+            height: 6px;
             background: #fff;
             border-radius: 50%;
             animation: firework 1s ease-out forwards;
@@ -179,18 +175,18 @@
                 opacity: 1;
             }
             100% {
-                transform: scale(15); /* Reduced scale for mobile */
+                transform: scale(20);
                 opacity: 0;
             }
         }
 
         .birthday-message {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem; /* Adjusted for mobile */
+            font-size: 4rem;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             animation: celebration-text 3s ease-in-out infinite;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
 
         @keyframes celebration-text {
@@ -216,7 +212,7 @@
         .heart {
             position: absolute;
             color: #ff69b4;
-            font-size: 1.5rem; /* Adjusted for mobile */
+            font-size: 2rem;
             animation: float-up 4s linear infinite;
             opacity: 0;
         }
@@ -235,8 +231,8 @@
         .confetti {
             position: fixed;
             top: -10px;
-            width: 8px; /* Reduced for mobile */
-            height: 8px;
+            width: 10px;
+            height: 10px;
             background: #ff6b6b;
             animation: confetti-fall 3s linear infinite;
         }
@@ -255,7 +251,7 @@
         .star {
             position: absolute;
             color: #ffd700;
-            font-size: 1.2rem; /* Adjusted for mobile */
+            font-size: 1.5rem;
             animation: twinkle 2s ease-in-out infinite;
         }
 
@@ -264,16 +260,35 @@
             50% { opacity: 1; transform: scale(1.2); }
         }
 
-        /* Media Query for Mobile */
-        @media (max-width: 600px) {
-            .title { font-size: 2rem; margin-bottom: 1.5rem; }
-            .cake { width: 80vw; height: 35vh; }
-            .cake-base { width: 85vw; height: 12vh; bottom: -12vh; }
-            .candles { top: -12vh; gap: 4vw; }
+        /* Media Query for Mobile and Tablets */
+        @media (max-width: 768px) {
+            .title { font-size: 2rem; margin-bottom: 2rem; }
+            .cake { width: 250px; height: 150px; }
+            .cake::before { top: -15px; left: 5px; right: 5px; height: 30px; }
+            .cake-base { width: 260px; height: 45px; bottom: -45px; left: -5px; }
+            .candles { top: -45px; gap: 15px; }
+            .candle { font-size: 1.5rem; }
+            .flame { width: 10px; height: 12px; top: -15px; }
+            .wish-text { font-size: 1.2rem; margin: 1.5rem 0 1rem; }
+            .blow-btn { padding: 10px 20px; font-size: 1rem; }
+            .birthday-message { font-size: 2.5rem; margin-top: 1.5rem; }
+            .heart { font-size: 1.5rem; }
+            .star { font-size: 1.2rem; }
+            .firework { width: 4px; height: 4px; }
+            @keyframes firework { 100% { transform: scale(15); } }
+            .confetti { width: 8px; height: 8px; }
+        }
+
+        @media (max-width: 480px) {
+            .title { font-size: 1.5rem; margin-bottom: 1rem; }
+            .cake { width: 200px; height: 120px; }
+            .cake::before { top: -10px; left: 2px; right: 2px; height: 20px; }
+            .cake-base { width: 210px; height: 35px; bottom: -35px; left: -5px; }
+            .candles { top: -35px; gap: 10px; }
             .candle { font-size: 1.2rem; }
-            .flame { width: 6px; height: 8px; }
+            .flame { width: 8px; height: 10px; top: -12px; }
             .wish-text { font-size: 1rem; margin: 1rem 0 0.5rem; }
-            .blow-btn { padding: 8px 15px; font-size: 0.9rem; min-width: 100px; }
+            .blow-btn { padding: 8px 15px; font-size: 0.9rem; }
             .birthday-message { font-size: 2rem; margin-top: 1rem; }
             .heart { font-size: 1.2rem; }
             .star { font-size: 1rem; }
